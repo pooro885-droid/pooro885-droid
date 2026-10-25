@@ -1,0 +1,96 @@
+Here's a complete, self-contained HTML landing page for Lumen, a focus-focused productivity app. It uses a dark theme with violet and cyan accents, and includes a sticky navigation, hero section, feature cards, animated stats, testimonials, and a signup call-to-action — all with inline CSS and JavaScript.
+
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen — Focus na Malinaw</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+
+  :root{
+    --bg:#0a0a12;
+    --bg2:#111120;
+    --card:rgba(255,255,255,.045);
+    --card-brd:rgba(255,255,255,.09);
+    --text:#e9e9f2;
+    --muted:#9a9ab4;
+    --accent:#7c5cff;
+    --accent2:#22d3ee;
+    --radius:18px;
+  }
+
+  html{scroll-behavior:smooth}
+
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+
+  .container{
+    width:100%;
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:100;
+    transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{
+    background:rgba(10,10,18,.78);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom-color:rgba(255,255,255,.07);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:70px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-.02em;
+  }
+  .logo-mark{
+    width:30px;height:30px;
+    border-radius:9px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:grid;
+    place-items:center;
+    font-size:.85rem;
+    box-shadow:0 0 22px rgba(124,92,255,.55);
+  }
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    list-style:none;
+  }
+  .nav-links a{
+    font-size:.92rem;
+    color:var(--muted);
+    transition:color .2s ease;
+  }
+  .nav-links a:hover{color:#fff}
+
+  .btn{
+    display
